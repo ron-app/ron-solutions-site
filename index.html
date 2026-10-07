@@ -3,10 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>株式会社Ron Solutions｜公式サイト</title>
-<meta name="description" content="株式会社Ron Solutionsは、発達障害のある方向けのコミュニティ運営・コンテンツ発信・アプリ開発・キャリア支援に取り組む会社です。">
-<meta property="og:title" content="株式会社Ron Solutions｜公式サイト">
-<meta property="og:description" content="発達障害のある方の毎日を、コミュニティとテクノロジーで支える。">
+<title>株式会社Ron Solutions｜中小企業のAI導入・業務改善コンサルティング</title>
+<meta name="description" content="株式会社Ron Solutionsは、中小企業の業務に生成AIを取り入れるコンサルティング会社です。AI業務診断から導入、社内研修・ルールづくり、定着までを支援します。">
+<meta property="og:title" content="株式会社Ron Solutions｜中小企業のAI導入・業務改善">
+<meta property="og:description" content="何にAIを使えば、どれだけ楽になるのか。診断から導入・定着まで伴走します。">
 <meta property="og:type" content="website">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%230E2A47'/%3E%3Ctext x='32' y='44' font-size='34' font-family='Georgia,serif' font-weight='bold' fill='%23fff' text-anchor='middle'%3ER%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -422,6 +422,43 @@ a { color: var(--blue); text-decoration: none; }
   .company-table td { padding: 18px 16px; }
 }
 </style>
+<style>
+/* ===== AIコンサル版の追加 ===== */
+.hero-cta { margin-top: 40px; display: flex; gap: 14px; flex-wrap: wrap; }
+.btn-light { display: inline-block; background: #fff; color: var(--navy); font-weight: 700; font-size: 15px; padding: 16px 40px; border-radius: 999px; transition: transform .2s; }
+.btn-light:hover { transform: translateY(-2px); }
+.btn-ghost { display: inline-block; border: 1px solid rgba(255,255,255,.5); color: #fff; font-weight: 600; font-size: 15px; padding: 15px 34px; border-radius: 999px; }
+.pain-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+.pain { background: var(--white); border: 1px solid var(--line); border-radius: 12px; padding: 22px 24px 22px 56px; position: relative; font-weight: 500; color: var(--navy); }
+.pain::before { content: ""; position: absolute; left: 22px; top: 27px; width: 18px; height: 18px; border-radius: 50%; border: 2px solid var(--blue); }
+.pain small { display: block; font-weight: 400; color: var(--text-sub); font-size: 13.5px; margin-top: 4px; }
+.service-grid.three { grid-template-columns: repeat(2, 1fr); }
+.service-card .tag { display: inline-block; font-size: 12px; font-weight: 600; color: var(--blue); background: var(--blue-soft); border-radius: 999px; padding: 3px 12px; margin-bottom: 14px; }
+.service-card ul { margin-top: 14px; padding-left: 1.2em; color: var(--text-sub); font-size: 14px; }
+.steps { counter-reset: step; display: grid; grid-template-columns: repeat(5, 1fr); gap: 14px; }
+.step { background: var(--white); border: 1px solid var(--line); border-radius: 12px; padding: 24px 18px; text-align: center; }
+.step::before { counter-increment: step; content: "STEP " counter(step); display: block; font-family: "Montserrat", sans-serif; font-size: 12px; font-weight: 700; letter-spacing: .15em; color: var(--blue); margin-bottom: 10px; }
+.step h3 { font-size: 16px; color: var(--navy); margin-bottom: 8px; }
+.step p { font-size: 13px; color: var(--text-sub); line-height: 1.75; }
+.usecase-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+.usecase { border-left: 3px solid var(--blue); background: var(--white); padding: 18px 20px; border-radius: 0 10px 10px 0; }
+.usecase h3 { font-size: 15.5px; color: var(--navy); margin-bottom: 6px; }
+.usecase p { font-size: 13.5px; color: var(--text-sub); line-height: 1.75; }
+.note { margin-top: 18px; font-size: 12.5px; color: var(--text-sub); }
+.reason-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+.reason .num { font-family: "Montserrat", sans-serif; font-size: 34px; font-weight: 700; color: rgba(255,255,255,.35); line-height: 1; margin-bottom: 14px; }
+.reason h3 { font-size: 17px; margin-bottom: 10px; }
+.reason p { font-size: 14px; color: rgba(255,255,255,.75); }
+.faq { max-width: 820px; }
+.faq details { background: var(--white); border: 1px solid var(--line); border-radius: 12px; padding: 18px 24px; margin-bottom: 12px; }
+.faq summary { cursor: pointer; font-weight: 700; color: var(--navy); list-style: none; }
+.faq summary::before { content: "Q. "; color: var(--blue); font-family: "Montserrat", sans-serif; }
+.faq details p { margin-top: 12px; color: var(--text-sub); font-size: 14.5px; }
+@media (max-width: 820px) {
+  .pain-grid, .service-grid.three, .usecase-grid, .reason-grid { grid-template-columns: 1fr; }
+  .steps { grid-template-columns: 1fr; }
+}
+</style>
 </head>
 <body>
 
@@ -432,8 +469,9 @@ a { color: var(--blue); text-decoration: none; }
       <span class="brand-name">Ron Solutions<small>株式会社Ron Solutions</small></span>
     </a>
     <nav class="nav">
-      <a href="#service">事業内容</a>
-      <a href="#message">代表メッセージ</a>
+      <a href="#service">サービス</a>
+      <a href="#flow">進め方</a>
+      <a href="#faq">よくある質問</a>
       <a href="#company">会社概要</a>
       <a href="#contact">お問い合わせ</a>
     </nav>
@@ -442,90 +480,126 @@ a { color: var(--blue); text-decoration: none; }
 
 <section class="hero" id="top">
   <div class="hero-inner">
-    <div class="hero-label en">RON SOLUTIONS, K.K.</div>
-    <h1>発達障害のある方の毎日を、<br>コミュニティとテクノロジーで支える。</h1>
-    <p>株式会社Ron Solutionsは、ADHDをはじめとする発達障害のある方に向けて、オンラインコミュニティの運営、情報発信、アプリ開発、キャリア支援に取り組む会社です。</p>
+    <div class="hero-label en">AI CONSULTING FOR SMALL BUSINESS</div>
+    <h1>中小企業の仕事に、<br>「ちゃんと使える」AIを。</h1>
+    <p>株式会社Ron Solutionsは、中小企業の業務に生成AIを取り入れるコンサルティング会社です。何にAIを使えば、どれだけ楽になるのか。業務の診断から導入、社内への定着まで伴走します。</p>
+    <div class="hero-cta">
+      <a class="btn-light" href="#contact">まずは相談する</a>
+      <a class="btn-ghost" href="#service">サービスを見る</a>
+    </div>
   </div>
 </section>
 
-<section class="section mission">
-  <div class="section-inner reveal">
-    <div class="section-label en">MISSION</div>
-    <p class="mission-copy">「生きづらさ」に、<br>事業で向き合う。</p>
-    <p>発達障害のある方が日々直面する困りごとは、一人で抱え込むには大きすぎることがあります。私たちは、同じ悩みを持つ人がつながれる場所と、毎日を少し楽にする仕組みをつくることで、誰もが自分らしく暮らせる社会の実現を目指します。</p>
+<section class="section alt">
+  <div class="section-inner">
+    <div class="section-head reveal">
+      <div class="section-label en">PROBLEM</div>
+      <h2 class="section-title">こんなお悩みはありませんか</h2>
+    </div>
+    <div class="pain-grid">
+      <div class="pain reveal">人が足りず、事務作業に追われている<small>本来の仕事に時間を使えない</small></div>
+      <div class="pain reveal">生成AIが話題だが、何に使えばいいか分からない<small>自社の業務に当てはめるイメージがわかない</small></div>
+      <div class="pain reveal">ツールを入れたが、社内で使われていない<small>一部の人しか使わず、効果が見えない</small></div>
+      <div class="pain reveal">情報漏えいが心配で、社員に使わせていいか判断できない<small>ルールがないまま、なんとなく使われている</small></div>
+    </div>
   </div>
 </section>
 
-<section class="section alt" id="service">
+<section class="section" id="service">
   <div class="section-inner">
     <div class="section-head reveal">
       <div class="section-label en">SERVICE</div>
-      <h2 class="section-title">事業内容</h2>
-      <p class="section-lead">当事者に寄り添う視点を軸に、コミュニティ・コンテンツ・プロダクト・キャリアの領域で事業を展開しています。</p>
+      <h2 class="section-title">サービス</h2>
+      <p class="section-lead">「何に、どれだけ効くか」を先に明らかにしてから、必要な分だけ導入します。小さく始めて、効果を確かめながら広げられます。</p>
     </div>
-    <div class="service-grid">
+    <div class="service-grid three">
       <div class="service-card reveal">
-        <div class="service-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-        </div>
-        <h3>コミュニティ事業</h3>
-        <div class="service-en en">COMMUNITY</div>
-        <p>ADHD当事者向けの会員制オンラインコミュニティを運営。日々の工夫や悩みを安心して共有し、支え合える場を提供しています。</p>
+        <div class="tag">まずはここから</div>
+        <h3>AI業務診断</h3>
+        <div class="service-en en">ASSESSMENT</div>
+        <p>今の業務を伺い、AIで減らせる作業と、その効果・費用の目安を整理します。導入するかどうかは、結果を見てから判断いただけます。</p>
+        <ul><li>業務のヒアリングと棚卸し</li><li>AI化の候補と削減時間の試算</li><li>導入プランとお見積もり</li></ul>
       </div>
       <div class="service-card reveal">
-        <div class="service-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
-        </div>
-        <h3>メディア・コンテンツ事業</h3>
-        <div class="service-en en">MEDIA & CONTENTS</div>
-        <p>発達障害に関する知見やライフハックを、記事・SNSを通じて発信。当事者やそのご家族に役立つ情報を届けています。</p>
+        <h3>AI導入支援</h3>
+        <div class="service-en en">IMPLEMENTATION</div>
+        <p>選んだ業務を、AIで回る形に仕上げます。ツールの選定・設定から、社員の方が迷わず使える手順づくりまで行います。</p>
+        <ul><li>ツールの選定・設定・連携</li><li>業務フローとテンプレートの作成</li><li>操作マニュアルの整備</li></ul>
       </div>
       <div class="service-card reveal">
-        <div class="service-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12" y2="18.01"/></svg>
-        </div>
-        <h3>アプリ開発事業</h3>
-        <div class="service-en en">APP DEVELOPMENT</div>
-        <p>発達障害のある方の日常をサポートするアプリケーションの企画・開発を行っています。</p>
+        <h3>社内研修・ルールづくり</h3>
+        <div class="service-en en">TRAINING &amp; POLICY</div>
+        <p>社員向けの生成AI研修と、安全に使うための社内ルール（入力してよい情報・確認の手順など）の策定を支援します。</p>
+        <ul><li>経営者・社員向けの研修、ハンズオン</li><li>AI利用ガイドラインの作成</li></ul>
       </div>
       <div class="service-card reveal">
-        <div class="service-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
-        </div>
-        <h3>キャリア支援事業</h3>
-        <div class="service-en en">CAREER SUPPORT</div>
-        <p>ADHDをはじめとする発達障害のある方の「働く」にまつわる悩みに寄り添い、働き方やキャリアに関する情報提供を行っています。就職・転職の支援は、厚生労働大臣の許可を受けた人材紹介会社と提携して行っています。</p>
+        <h3>定着・改善サポート</h3>
+        <div class="service-en en">CONTINUOUS SUPPORT</div>
+        <p>使い始めてからの「うまく回らない」を一緒に直します。効果を測りながら、次にAI化する業務を見つけていきます。</p>
+        <ul><li>定例ミーティングと改善</li><li>効果測定と次の提案</li></ul>
       </div>
-      <div class="service-card reveal">
-        <div class="service-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 1 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 1 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 1 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 1 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
-        </div>
-        <h3>AI活用支援</h3>
-        <div class="service-en en">AI CONSULTING</div>
-        <p>AIツールの導入支援や業務効率化のコンサルティングを通じて、企業・個人の生産性向上をサポートします。</p>
-      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section alt">
+  <div class="section-inner">
+    <div class="section-head reveal">
+      <div class="section-label en">USE CASE</div>
+      <h2 class="section-title">AIで楽にできる業務の例</h2>
+    </div>
+    <div class="usecase-grid">
+      <div class="usecase reveal"><h3>問い合わせへの返信</h3><p>メールや問い合わせへの返信の下書きをAIが作り、担当者は確認して送るだけに。</p></div>
+      <div class="usecase reveal"><h3>見積書・提案書の作成</h3><p>過去の資料とひな形から、AIが下書きを作成します。</p></div>
+      <div class="usecase reveal"><h3>議事録・日報</h3><p>会議の録音やメモから、議事録や報告書をまとめます。</p></div>
+      <div class="usecase reveal"><h3>社内の情報検索</h3><p>マニュアルや規程をAIに聞けば答えが返る状態にします。</p></div>
+      <div class="usecase reveal"><h3>書類の読み取り・入力</h3><p>請求書や申込書の内容を読み取り、表やシステムへの入力を減らします。</p></div>
+      <div class="usecase reveal"><h3>発信・広報</h3><p>SNSやブログ、求人原稿などの文章づくりを効率化します。</p></div>
+    </div>
+    <p class="note reveal">※ 上記は導入のイメージです。実際の効果は業務診断で試算します。</p>
+  </div>
+</section>
+
+<section class="section" id="flow">
+  <div class="section-inner">
+    <div class="section-head reveal">
+      <div class="section-label en">FLOW</div>
+      <h2 class="section-title">ご支援の流れ</h2>
+    </div>
+    <div class="steps">
+      <div class="step reveal"><h3>ご相談</h3><p>課題やご要望を伺います。オンラインでも対応します。</p></div>
+      <div class="step reveal"><h3>業務診断</h3><p>業務を棚卸しし、AI化の候補と効果を整理します。</p></div>
+      <div class="step reveal"><h3>ご提案</h3><p>導入プランとお見積もりをご提示します。</p></div>
+      <div class="step reveal"><h3>導入</h3><p>設定・テンプレート・マニュアルを整え、研修を行います。</p></div>
+      <div class="step reveal"><h3>定着・改善</h3><p>効果を測りながら改善し、次の業務へ広げます。</p></div>
     </div>
   </div>
 </section>
 
 <section class="stats">
   <div class="stats-inner">
-    <div class="stats-title en">OUR NUMBERS</div>
-    <div class="stats-grid">
-      <div class="reveal">
-        <div class="stat-num">1,500<span>名以上</span></div>
-        <div class="stat-label">コミュニティ会員数</div>
-      </div>
-      <div class="reveal">
-        <div class="stat-num">4,300<span>名以上</span></div>
-        <div class="stat-label">累計加入者数</div>
-      </div>
-      <div class="reveal">
-        <div class="stat-num">20,000<span>人以上</span></div>
-        <div class="stat-label">SNS・メディア総フォロワー</div>
-      </div>
+    <div class="stats-title en">WHY RON SOLUTIONS</div>
+    <div class="reason-grid">
+      <div class="reason reveal"><div class="num en">01</div><h3>導入前に「効果」を見える化</h3><p>いきなりツールを売りません。業務診断で、何にどれだけ効くかを確かめてから判断いただけます。</p></div>
+      <div class="reason reveal"><div class="num en">02</div><h3>小さく始めて、広げられる</h3><p>まず1つの業務から。効果を確認しながら、無理のない範囲で対象を広げます。</p></div>
+      <div class="reason reveal"><div class="num en">03</div><h3>「使われる」まで伴走</h3><p>導入して終わりではなく、社員の方が日常的に使える状態になるまで支援します。</p></div>
     </div>
-    <div class="stats-note">※ 2026年8月時点</div>
+  </div>
+</section>
+
+<section class="section alt" id="faq">
+  <div class="section-inner">
+    <div class="section-head reveal">
+      <div class="section-label en">FAQ</div>
+      <h2 class="section-title">よくある質問</h2>
+    </div>
+    <div class="faq reveal">
+      <details><summary>社員数が少ない会社でも相談できますか？</summary><p>はい。少人数の会社ほど、1つの業務が楽になる効果が大きくなります。まずはお気軽にご相談ください。</p></details>
+      <details><summary>AIに詳しい社員がいなくても大丈夫ですか？</summary><p>大丈夫です。設定や手順づくりはこちらで行い、社員の方が迷わず使えるマニュアルと研修をご用意します。</p></details>
+      <details><summary>情報漏えいが心配です。</summary><p>入力してよい情報の線引きや、確認の手順を含めた社内ルールづくりから支援します。ツールも、情報の扱いが明確なものを選定します。</p></details>
+      <details><summary>補助金は使えますか？</summary><p>内容によっては、IT導入に関する国の補助金などの対象になる場合があります。ご相談の際に、使えそうな制度をご案内します。</p></details>
+      <details><summary>オンラインでも対応できますか？</summary><p>はい。ご相談から研修まで、オンラインで対応できます。</p></details>
+    </div>
   </div>
 </section>
 
@@ -537,9 +611,9 @@ a { color: var(--blue); text-decoration: none; }
     </div>
     <div class="message-grid">
       <div class="message-body reveal">
-        <p>発達障害のある方が抱える困りごとの多くは、目に見えにくく、周囲に理解されにくいものです。だからこそ、同じ悩みを持つ人同士がつながり、知恵を共有できる場所には大きな価値があると考えています。</p>
-        <p>私たちは、個人として続けてきた発信とコミュニティ運営を法人化し、2026年に株式会社Ron Solutionsを設立しました。これまで多くの方に参加いただいたコミュニティを土台に、アプリ開発や支援事業など、当事者の毎日を支える取り組みを一つずつ形にしていきます。</p>
-        <p>小さな会社ですが、向き合う課題から逃げず、誠実に事業を続けてまいります。今後ともよろしくお願いいたします。</p>
+        <p>生成AIは、人手が限られた中小企業にこそ大きな力になる道具です。一方で、「何に使えばいいのか分からない」「入れてみたが定着しない」という声も多く聞きます。</p>
+        <p>私たちは、ツールを売ることよりも、御社の業務が実際に楽になることを大切にしています。業務を一緒に整理し、効果が見込めるところから小さく始め、社員の方が日常的に使える状態になるまで伴走します。</p>
+        <p>コンサルティングファームで培った業務整理の経験と、自社の事業でAIを日々使いこなしてきた実践の両方を活かして、誠実にご支援いたします。</p>
         <div class="message-sign">
           代表取締役
           <strong>作本 晟暢</strong>
@@ -550,7 +624,7 @@ a { color: var(--blue); text-decoration: none; }
         <ul>
           <li>早稲田大学 社会科学部 卒業</li>
           <li>PwCコンサルティング合同会社に入社し、コンサルティング業務に従事</li>
-          <li>独立後、映像制作・コンサルティング事業や、発達障害当事者向けの発信・コミュニティ運営を行う</li>
+          <li>独立後、コンサルティング・映像制作、Webメディア・会員制コミュニティの運営を行う</li>
           <li>2026年4月、株式会社Ron Solutionsを設立し、代表取締役に就任</li>
         </ul>
       </div>
@@ -565,42 +639,14 @@ a { color: var(--blue); text-decoration: none; }
       <h2 class="section-title">会社概要</h2>
     </div>
     <table class="company-table reveal">
-      <tr>
-        <th>会社名</th>
-        <td>株式会社Ron Solutions（RON SOLUTIONS, K.K.）</td>
-      </tr>
-      <tr>
-        <th>設立</th>
-        <td>2026年4月1日</td>
-      </tr>
-      <tr>
-        <th>法人番号</th>
-        <td>9030001171812</td>
-      </tr>
-      <tr>
-        <th>代表者</th>
-        <td>代表取締役　作本 晟暢</td>
-      </tr>
-      <tr>
-        <th>所在地</th>
-        <td>埼玉県川口市</td>
-      </tr>
-      <tr>
-        <th>事業内容</th>
-        <td>会員制オンラインコミュニティの運営／コンテンツの制作・販売／アプリケーションの企画・開発／発達障害のある方向けのキャリア支援（厚生労働大臣許可の人材紹介事業者との提携による）／AI活用コンサルティング</td>
-      </tr>
-      <tr>
-        <th>沿革</th>
-        <td>2024年10月　個人事業として発達障害当事者向けの発信・コミュニティ運営を開始<br>2026年4月　事業を法人化し、株式会社Ron Solutionsを設立</td>
-      </tr>
-      <tr>
-        <th>取引銀行</th>
-        <td>三井住友銀行</td>
-      </tr>
-      <tr>
-        <th>連絡先</th>
-        <td><a href="mailto:a.sakumoto@ron-solutions.jp">a.sakumoto@ron-solutions.jp</a></td>
-      </tr>
+      <tr><th>会社名</th><td>株式会社Ron Solutions（RON SOLUTIONS, K.K.）</td></tr>
+      <tr><th>設立</th><td>2026年4月1日</td></tr>
+      <tr><th>法人番号</th><td>9030001171812</td></tr>
+      <tr><th>代表者</th><td>代表取締役　作本 晟暢</td></tr>
+      <tr><th>所在地</th><td>埼玉県川口市</td></tr>
+      <tr><th>事業内容</th><td>AI導入・業務改善コンサルティング／生成AI研修・社内ルール策定支援／Webメディア・会員制オンラインコミュニティの運営／アプリケーションの企画・開発</td></tr>
+      <tr><th>取引銀行</th><td>三井住友銀行</td></tr>
+      <tr><th>連絡先</th><td><a href="mailto:a.sakumoto@ron-solutions.jp">a.sakumoto@ron-solutions.jp</a></td></tr>
     </table>
   </div>
 </section>
@@ -609,8 +655,8 @@ a { color: var(--blue); text-decoration: none; }
   <div class="section-inner reveal">
     <div class="section-label en">CONTACT</div>
     <h2 class="section-title" style="margin-bottom: 24px;">お問い合わせ</h2>
-    <p>事業に関するお問い合わせ・ご相談は、メールにてお気軽にご連絡ください。</p>
-    <a class="contact-btn" href="mailto:a.sakumoto@ron-solutions.jp">メールでお問い合わせ</a>
+    <p>AIの活用や業務改善について、まずはお気軽にご相談ください。「何から始めればいいか分からない」という段階でも大丈夫です。</p>
+    <a class="contact-btn" href="mailto:a.sakumoto@ron-solutions.jp?subject=AI%E6%B4%BB%E7%94%A8%E3%81%AE%E3%81%94%E7%9B%B8%E8%AB%87">メールで相談する</a>
     <span class="contact-mail">a.sakumoto@ron-solutions.jp</span>
   </div>
 </section>
