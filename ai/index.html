@@ -23,7 +23,7 @@
 <style>
 :root {
   --navy: #0e2a47; --navy-dark: #0a1f36; --blue: #2e6fb7; --blue-soft: #eaf1f8;
-  --accent: #2e6fb7; --accent-dark: #1f5590;
+  --accent: #2e6fb7; --accent-dark: #1f5590; --cta: #e8833a; --cta-dark: #cf6d26;
   --text: #1e2b3a; --text-sub: #5a6b7d; --bg-light: #f5f8fb; --line: #dde5ec; --white: #fff;
 }
 * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -40,8 +40,8 @@ a { color: var(--blue); text-decoration: none; }
 .brand-mark { width: 32px; height: 32px; border-radius: 8px; background: var(--navy); color: #fff; display: flex; align-items: center; justify-content: center; font-family: Georgia, serif; font-weight: 700; font-size: 18px; }
 .brand-name { font-family: "Montserrat", sans-serif; font-weight: 700; font-size: 16px; letter-spacing: .06em; line-height: 1.2; }
 .brand-name small { display: block; font-family: "Noto Sans JP", sans-serif; font-weight: 500; font-size: 10px; color: var(--text-sub); letter-spacing: .1em; }
-.btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; background: var(--accent); color: #fff; font-weight: 700; border-radius: 999px; padding: 15px 34px; font-size: 16px; box-shadow: 0 6px 18px rgba(46,111,183,.28); transition: background .2s, transform .2s; border: 0; cursor: pointer; font-family: inherit; }
-.btn:hover { background: var(--accent-dark); transform: translateY(-1px); }
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; background: var(--cta); color: #fff; font-weight: 700; border-radius: 999px; padding: 15px 34px; font-size: 16px; box-shadow: 0 6px 18px rgba(232,131,58,.35); transition: background .2s, transform .2s; border: 0; cursor: pointer; font-family: inherit; }
+.btn:hover { background: var(--cta-dark); transform: translateY(-1px); }
 .btn.small { padding: 9px 20px; font-size: 14px; box-shadow: none; }
 .btn-sub { display: block; font-size: 12.5px; color: var(--text-sub); margin-top: 10px; }
 
@@ -157,9 +157,7 @@ a { color: var(--blue); text-decoration: none; }
 .footer .wrap { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
 .footer a { color: rgba(255,255,255,.85); }
 
-/* 濃い背景の上のボタンは白抜き（青系で統一、2026-10-11本人） */
-.hero .btn, .cta-band .btn { background: #fff; color: var(--navy); box-shadow: 0 6px 18px rgba(0,0,0,.25); }
-.hero .btn:hover, .cta-band .btn:hover { background: var(--blue-soft); }
+/* 色は青系で統一、申し込みボタンだけオレンジ（2026-10-11本人） */
 
 /* mobile sticky CTA */
 .sticky { display: none; }
