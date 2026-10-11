@@ -23,7 +23,7 @@
 <style>
 :root {
   --navy: #0e2a47; --navy-dark: #0a1f36; --blue: #2e6fb7; --blue-soft: #eaf1f8;
-  --accent: #e8833a; --accent-dark: #cf6d26;
+  --accent: #2e6fb7; --accent-dark: #1f5590;
   --text: #1e2b3a; --text-sub: #5a6b7d; --bg-light: #f5f8fb; --line: #dde5ec; --white: #fff;
 }
 * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -40,7 +40,7 @@ a { color: var(--blue); text-decoration: none; }
 .brand-mark { width: 32px; height: 32px; border-radius: 8px; background: var(--navy); color: #fff; display: flex; align-items: center; justify-content: center; font-family: Georgia, serif; font-weight: 700; font-size: 18px; }
 .brand-name { font-family: "Montserrat", sans-serif; font-weight: 700; font-size: 16px; letter-spacing: .06em; line-height: 1.2; }
 .brand-name small { display: block; font-family: "Noto Sans JP", sans-serif; font-weight: 500; font-size: 10px; color: var(--text-sub); letter-spacing: .1em; }
-.btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; background: var(--accent); color: #fff; font-weight: 700; border-radius: 999px; padding: 15px 34px; font-size: 16px; box-shadow: 0 6px 18px rgba(232,131,58,.35); transition: background .2s, transform .2s; border: 0; cursor: pointer; font-family: inherit; }
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; background: var(--accent); color: #fff; font-weight: 700; border-radius: 999px; padding: 15px 34px; font-size: 16px; box-shadow: 0 6px 18px rgba(46,111,183,.28); transition: background .2s, transform .2s; border: 0; cursor: pointer; font-family: inherit; }
 .btn:hover { background: var(--accent-dark); transform: translateY(-1px); }
 .btn.small { padding: 9px 20px; font-size: 14px; box-shadow: none; }
 .btn-sub { display: block; font-size: 12.5px; color: var(--text-sub); margin-top: 10px; }
@@ -50,7 +50,7 @@ a { color: var(--blue); text-decoration: none; }
 .hero-grid { display: grid; grid-template-columns: 1.25fr 1fr; gap: 40px; align-items: center; }
 .hero-label { display: inline-block; font-size: 13px; font-weight: 700; background: rgba(255,255,255,.12); border: 1px solid rgba(255,255,255,.25); border-radius: 999px; padding: 4px 14px; margin-bottom: 18px; }
 .hero h1 { font-size: 38px; line-height: 1.45; font-weight: 700; letter-spacing: .02em; }
-.hero h1 em { font-style: normal; color: #ffd2a8; }
+.hero h1 em { font-style: normal; }
 .hero p.lead { margin: 18px 0 26px; font-size: 16px; color: rgba(255,255,255,.86); }
 .hero .btn-sub { color: rgba(255,255,255,.75); }
 .offer { background: #fff; color: var(--text); border-radius: 14px; padding: 26px 24px; box-shadow: 0 18px 40px rgba(0,0,0,.25); }
@@ -59,7 +59,7 @@ a { color: var(--blue); text-decoration: none; }
 .offer ul { list-style: none; }
 .offer li { position: relative; padding: 9px 0 9px 30px; border-top: 1px dashed var(--line); font-size: 14.5px; font-weight: 500; }
 .offer li::before { content: ""; position: absolute; left: 4px; top: 15px; width: 14px; height: 8px; border-left: 3px solid var(--blue); border-bottom: 3px solid var(--blue); transform: rotate(-45deg); }
-.offer .price { margin-top: 12px; text-align: center; font-weight: 700; color: var(--accent-dark); font-size: 15px; }
+.offer .price { margin-top: 12px; text-align: center; font-weight: 700; color: var(--navy); font-size: 15px; }
 
 /* trust bar */
 .trust { background: var(--bg-light); border-bottom: 1px solid var(--line); }
@@ -81,7 +81,7 @@ a { color: var(--blue); text-decoration: none; }
 .pain::before { content: "?"; position: absolute; left: 16px; top: 16px; width: 22px; height: 22px; border-radius: 50%; background: var(--blue-soft); color: var(--blue); font-weight: 700; font-size: 13px; display: flex; align-items: center; justify-content: center; }
 .pain small { display: block; color: var(--text-sub); font-weight: 400; font-size: 13px; }
 .answer { margin-top: 30px; text-align: center; font-size: 20px; font-weight: 700; color: var(--navy); }
-.answer span { background: linear-gradient(transparent 62%, #ffe2c7 62%); }
+.answer span { background: linear-gradient(transparent 62%, #d6e6f7 62%); }
 
 .cases { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
 .case { background: #fff; border: 1px solid var(--line); border-radius: 12px; padding: 20px; }
@@ -156,6 +156,10 @@ a { color: var(--blue); text-decoration: none; }
 .footer { background: var(--navy-dark); color: rgba(255,255,255,.7); font-size: 12.5px; padding: 30px 0 90px; }
 .footer .wrap { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
 .footer a { color: rgba(255,255,255,.85); }
+
+/* 濃い背景の上のボタンは白抜き（青系で統一、2026-10-11本人） */
+.hero .btn, .cta-band .btn { background: #fff; color: var(--navy); box-shadow: 0 6px 18px rgba(0,0,0,.25); }
+.hero .btn:hover, .cta-band .btn:hover { background: var(--blue-soft); }
 
 /* mobile sticky CTA */
 .sticky { display: none; }
