@@ -12,7 +12,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>株式会社Ron Solutions｜AIコンサルティング・ITコンサルティング</title>
-<meta name="description" content="株式会社Ron Solutionsは、AIコンサルティング、ITコンサルティング・エンジニア支援、オンラインコミュニティの運営、アプリケーション開発を行う会社です。">
+<meta name="description" content="株式会社Ron Solutionsは、AIコンサルティング、SES事業（エンジニア支援）、オンラインコミュニティの運営、アプリケーション開発を行う会社です。">
 <meta property="og:title" content="株式会社Ron Solutions">
 <meta property="og:description" content="複雑な課題を、論理と実行で解きほぐす。">
 <meta property="og:type" content="website">
@@ -47,19 +47,24 @@ a { color: var(--ink); text-decoration: none; }
 .header { position: fixed; inset: 0 0 auto 0; z-index: 100; background: rgba(255,255,255,.96); border-bottom: 1px solid var(--line); }
 .header-inner { max-width: 1120px; margin: 0 auto; padding: 0 28px; height: 72px; display: flex; align-items: center; justify-content: space-between; }
 .brand img { height: 40px; width: auto; }
-.nav { display: flex; gap: 30px; }
+.nav { display: flex; gap: 30px; align-items: center; }
 .nav a { font-size: 13.5px; font-weight: 500; color: var(--ink); text-decoration: none; }
 .nav a:hover { opacity: .6; }
 .nav-cta { background: var(--ink); color: #fff !important; padding: 10px 20px; }
 .nav-cta:hover { opacity: 1 !important; background: #000; }
 
 /* Hero */
-.hero { background: var(--paper); padding: 200px 28px 120px; border-bottom: 1px solid var(--line); }
+.hero { position: relative; color: #fff; padding: 200px 28px 110px; background: #1c1c1c url(assets/hero.jpg) center 35%/cover no-repeat; }
+.hero::before { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(20,20,20,.86) 0%, rgba(20,20,20,.72) 55%, rgba(20,20,20,.55) 100%); }
+.hero-inner { position: relative; }
 .hero-inner { max-width: 1120px; margin: 0 auto; }
-.eyebrow { display: inline-flex; align-items: center; gap: 12px; font-family: "Montserrat", sans-serif; font-size: 12px; font-weight: 600; letter-spacing: .28em; color: var(--ink); margin-bottom: 30px; }
+.eyebrow { display: inline-flex; align-items: center; gap: 12px; font-family: "Montserrat", sans-serif; font-size: 12px; font-weight: 600; letter-spacing: .28em; color: #fff; margin-bottom: 30px; }
 .eyebrow::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--orange); }
 .hero h1 { font-family: var(--serif-ja); font-weight: 600; font-size: clamp(30px, 4.6vw, 50px); line-height: 1.6; letter-spacing: .06em; margin-bottom: 32px; }
-.hero p { font-size: clamp(14px, 1.5vw, 16px); color: var(--text-sub); max-width: 620px; }
+.hero p { font-size: clamp(14px, 1.5vw, 16px); color: rgba(255,255,255,.78); max-width: 620px; }
+.hero .btn-ink { background: #fff; color: var(--ink); }
+.hero .btn-ink:hover { background: #e9e9e9; }
+.hero .btn-text { color: #fff; border-bottom-color: rgba(255,255,255,.7); }
 .hero-cta { margin-top: 44px; display: flex; gap: 28px; flex-wrap: wrap; align-items: flex-end; }
 .btn { display: inline-flex; align-items: center; justify-content: space-between; gap: 28px; min-width: 260px; font-size: 15px; font-weight: 700; letter-spacing: .06em; padding: 20px 26px; text-decoration: none; transition: background .2s, color .2s; }
 .arw { font-family: "Montserrat", sans-serif; font-weight: 500; display: inline-block; transition: transform .25s; }
@@ -70,12 +75,13 @@ a { color: var(--ink); text-decoration: none; }
 .btn-line:hover { background: var(--ink); color: #fff; }
 .btn-text { display: inline-flex; align-items: center; gap: 14px; font-size: 15px; font-weight: 700; letter-spacing: .06em; padding: 20px 4px 8px; border-bottom: 1px solid var(--ink); }
 .btn-text:hover .arw { transform: translateY(3px); }
-.hero-biz { margin-top: 70px; padding-top: 26px; border-top: 1px solid var(--line); display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; font-size: 13px; color: var(--text-sub); }
-.hero-biz a { display: block; padding: 4px 0 10px; border-bottom: 1px solid transparent; transition: border-color .2s, color .2s; color: var(--text-sub); }
-.hero-biz a:hover { border-bottom-color: var(--ink); color: var(--ink); }
-.hero-biz a .go { float: right; font-family: "Montserrat", sans-serif; color: var(--ink); transition: transform .25s; display: inline-block; }
+.hero-biz { margin-top: 70px; border-top: 1px solid rgba(255,255,255,.25); display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; font-size: 13px; }
+.hero-biz a { display: block; padding: 22px 18px 18px; transition: background .25s, color .25s; color: rgba(255,255,255,.75); }
+.hero-biz a + a { border-left: 1px solid rgba(255,255,255,.15); }
+.hero-biz a:hover { background: rgba(255,255,255,.12); color: #fff; }
+.hero-biz a .go { float: right; font-family: "Montserrat", sans-serif; color: #fff; transition: transform .25s; display: inline-block; }
 .hero-biz a:hover .go { transform: translateY(3px); }
-.hero-biz a b { display: block; font-family: var(--serif-en); font-weight: 400; font-size: 22px; color: var(--ink); letter-spacing: 0; line-height: 1.2; margin-bottom: 4px; }
+.hero-biz a b { display: block; font-family: var(--serif-en); font-weight: 400; font-size: 22px; color: #fff; letter-spacing: 0; line-height: 1.2; margin-bottom: 4px; }
 
 /* Sections */
 .section { padding: 110px 28px; }
@@ -102,13 +108,13 @@ a { color: var(--ink); text-decoration: none; }
 .biz { display: grid; grid-template-columns: 140px 1fr 1fr; gap: 40px; padding: 48px 0; border-top: 1px solid var(--line); }
 .biz:last-child { border-bottom: 1px solid var(--line); }
 .biz-num { font-family: var(--serif-en); font-size: 56px; line-height: 1; color: var(--ink); position: relative; display: inline-block; }
-.biz-num::after { content: ""; position: absolute; top: 2px; right: -14px; width: 9px; height: 9px; border-radius: 50%; background: var(--orange); }
 .biz h3 { font-family: var(--serif-ja); font-weight: 600; font-size: 22px; letter-spacing: .05em; line-height: 1.5; }
 .biz .biz-en { font-size: 10.5px; font-weight: 600; color: var(--text-sub); margin-top: 8px; }
 .biz p { font-size: 14.5px; color: var(--text-sub); }
 .biz-tags { display: flex; flex-wrap: wrap; gap: 6px 18px; margin-top: 18px; font-size: 13px; }
 .biz-tags span::before { content: "— "; color: var(--text-sub); }
-.biz-link { display: inline-block; margin-top: 20px; font-size: 14px; font-weight: 500; }
+.biz-link { display: inline-block; margin: 20px 28px 0 0; font-size: 14px; font-weight: 500; }
+.biz .biz-note { margin-top: 12px; color: var(--ink); }
 .biz-link::after { content: " →"; }
 
 /* Strengths */
@@ -148,22 +154,15 @@ a { color: var(--ink); text-decoration: none; }
 
 /* Partner */
 .partner-card .p-en { font-family: "Montserrat", sans-serif; font-size: 11px; font-weight: 600; letter-spacing: .28em; color: var(--text-sub); margin-bottom: 10px; }
-.partner-card { border: 0 !important; border-top: 3px solid var(--ink) !important; padding: 44px 40px !important; }
-.partner-card.dark { background: var(--ink) !important; color: #fff; }
-.partner-card.dark p, .partner-card.dark .p-en { color: rgba(255,255,255,.7); }
-.partner-card.dark li::before { color: rgba(255,255,255,.5) !important; }
-.partner-card .btn { margin-top: 32px; width: 100%; }
-.partner-card.dark .btn-ink { background: #fff; color: var(--ink); }
-.partner-card.dark .btn-ink:hover { background: #ececec; }
-.partner-card li { padding: 8px 0; border-bottom: 1px solid var(--line); }
-.partner-card.dark li { border-bottom-color: rgba(255,255,255,.15); }
-.partner-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 28px; }
-.partner-card { background: var(--white); border: 1px solid var(--line); padding: 38px 36px; display: flex; flex-direction: column; }
+.partner-grid { display: grid; grid-template-columns: repeat(2, 1fr); border-top: 1px solid var(--ink); }
+.partner-card { padding: 30px 40px 0 0; display: flex; flex-direction: column; }
+.partner-card + .partner-card { padding-left: 40px; border-left: 1px solid var(--line); }
+.partner-card li { padding: 6px 0; }
 .partner-card h3 { font-family: var(--serif-ja); font-weight: 600; font-size: 19px; margin-bottom: 12px; }
 .partner-card p { font-size: 14.5px; color: var(--text-sub); flex: 1; }
 .partner-card ul { margin: 14px 0 0; list-style: none; font-size: 14px; }
 .partner-card li::before { content: "— "; color: var(--text-sub); }
-.partner-card .btn { margin-top: 28px; text-align: center; }
+.partner-card .btn-text { margin-top: 18px; align-self: flex-start; padding-top: 12px; }
 
 /* News */
 .news-list { list-style: none; border-top: 1px solid var(--ink); }
@@ -204,8 +203,6 @@ a { color: var(--ink); text-decoration: none; }
 .hero .rise:nth-child(4) { animation-delay: .36s; }
 .hero .rise:nth-child(5) { animation-delay: .48s; }
 @keyframes rise { to { opacity: 1; transform: none; } }
-.biz { transition: background .3s, padding .3s; }
-.biz:hover { background: rgba(255,255,255,.7); }
 .biz-link { transition: gap .2s; }
 .usecase { transition: background .3s; }
 .usecase:hover { background: var(--paper); }
@@ -222,6 +219,9 @@ a { color: var(--ink); text-decoration: none; }
   .hero h1 { font-size: 26px; }
   .about-body { margin-top: 24px; }
   .hero-biz { grid-template-columns: repeat(2, 1fr); }
+  .hero-biz a:nth-child(3) { border-left: 0; }
+  .partner-card, .partner-card + .partner-card { padding: 28px 0 10px; border-left: 0; }
+  .partner-card + .partner-card { border-top: 1px solid var(--line); }
   .section { padding: 80px 22px; }
   .section-head { grid-template-columns: 1fr; gap: 0; }
   .section-lead { padding-top: 14px; }
@@ -244,7 +244,7 @@ a { color: var(--ink); text-decoration: none; }
   <div class="header-inner">
     <a href="#top" class="brand"><img src="assets/ron-logo.svg" alt="Ron Solutions（株式会社Ron Solutions）" width="88" height="40"></a>
     <nav class="nav">
-      <a href="#mission">ミッション</a>
+      <a href="#mission">Mission</a>
       <a href="#business">事業内容</a>
       <a href="#works">実績</a>
       <a href="#message">代表メッセージ</a>
@@ -266,7 +266,7 @@ a { color: var(--ink); text-decoration: none; }
     </div>
     <div class="hero-biz rise">
       <a href="#biz-ai"><b>01</b>AIコンサルティング<span class="go">↓</span></a>
-      <a href="#biz-it"><b>02</b>ITコンサルティング・エンジニア支援<span class="go">↓</span></a>
+      <a href="#biz-it"><b>02</b>SES事業<span class="go">↓</span></a>
       <a href="#biz-app"><b>03</b>アプリケーション開発<span class="go">↓</span></a>
       <a href="#biz-media"><b>04</b>メディア・コミュニティ運営<span class="go">↓</span></a>
     </div>
@@ -276,7 +276,7 @@ a { color: var(--ink); text-decoration: none; }
 <section class="section" id="mission">
   <div class="section-inner">
     <div class="section-head reveal">
-      <div><div class="section-label">MISSION</div><h2 class="section-title">ミッション</h2></div>
+      <div><div class="section-label">MISSION</div></div>
       <div class="about-body">
         <p class="about-copy">論理で整理し、<br>気づきを届け、前に進める。</p>
         <p>新しい技術や良い計画があっても、課題が複雑なままでは現場は動きません。私たちは、絡み合った課題を筋道立てて整理し、見落とされていた打ち手を示すことから始めます。そのうえで、AIの導入やプロジェクトの推進を通じて、成果が出るところまで共に進みます。</p>
@@ -284,7 +284,7 @@ a { color: var(--ink); text-decoration: none; }
     </div>
     <div class="vision-grid reveal">
       <div class="vision-item"><div class="en">LOGIC</div><h3>論理で、課題を解きほぐす</h3><p>事実と筋道に基づいて課題を整理し、何から手を付けるべきかを明確にします。</p></div>
-      <div class="vision-item"><div class="en">INSIGHT</div><h3>気づきを届ける</h3><p>外からの視点で、見えていなかった課題と打ち手を示し、次の一歩につながる気づきを届けます。</p></div>
+      <div class="vision-item"><div class="en">INSIGHT</div><h3>気づきを届ける</h3><p>外からの視点で、見落とされていた課題と打ち手を示します。</p></div>
       <div class="vision-item"><div class="en">EXECUTION</div><h3>成果が出るまで実行する</h3><p>計画を届けて終わりにせず、現場で使われ、成果が出る状態まで伴走します。</p></div>
     </div>
   </div>
@@ -302,16 +302,17 @@ a { color: var(--ink); text-decoration: none; }
         <div>
           <p>企業の業務に生成AIを取り入れる支援を行います。どの業務にAIを使えば、どれだけ効果があるのかを業務診断で明らかにし、ツールの選定・設定、業務フローとマニュアルの整備、社員向けの生成AI研修、安全に使うための社内ルールづくり、導入後の定着まで伴走します。</p>
           <div class="biz-tags"><span>AI業務診断</span><span>導入・開発支援</span><span>生成AI研修</span><span>AI利用ルール策定</span><span>定着・改善支援</span></div>
-          <a class="biz-link" href="ai/">無料AI業務診断について</a>
         </div>
       </div>
       <div class="biz reveal" id="biz-it">
         <div><span class="biz-num">02</span></div>
-        <div><h3>ITコンサルティング・<br>エンジニア支援</h3><div class="biz-en en">IT CONSULTING</div></div>
+        <div><h3>SES事業</h3><div class="biz-en en">ENGINEERING SERVICE</div></div>
         <div>
-          <p>DX推進やシステム導入などのプロジェクトに、経験豊富なコンサルタント・エンジニアが参画し、計画から実行までを支えます。当社のメンバーに加え、信頼できるパートナー企業・フリーランスのネットワークから、案件に合う体制を編成します。</p>
+          <p>システム開発・インフラ・PMOなどのプロジェクトに、経験豊富なエンジニア・コンサルタントが業務委託（準委任）で参画し、計画から実行までを支えます。当社のメンバーに加え、信頼できるパートナー企業・フリーランスのネットワークから、案件に合う体制を編成します。</p>
+          <p class="biz-note">協業いただけるパートナー企業・フリーランスの方も募集しています。</p>
           <div class="biz-tags"><span>PM・PMO支援</span><span>DX・業務改革</span><span>システム開発・導入</span><span>インフラ・運用保守</span><span>データ活用</span></div>
-          <a class="biz-link" href="#contact">案件・体制のご相談</a>
+          <a class="biz-link" href="#contact" data-type="SES（案件・体制）のご相談">案件・体制のご相談</a>
+          <a class="biz-link" href="#partner">パートナー募集について</a>
         </div>
       </div>
       <div class="biz reveal" id="biz-app">
@@ -386,7 +387,7 @@ a { color: var(--ink); text-decoration: none; }
         <tr><th>設立</th><td>2026年4月1日</td></tr>
         <tr><th>代表者</th><td>代表取締役　作本 晟暢</td></tr>
         <tr><th>所在地</th><td>埼玉県川口市</td></tr>
-        <tr><th>事業内容</th><td>AI導入・業務改善コンサルティング、生成AI研修・社内ルール策定支援<br>ITコンサルティング、システム開発・運用に関するエンジニア支援（業務委託）<br>Webメディア運営<br>アプリケーションの企画・開発</td></tr>
+        <tr><th>事業内容</th><td>AI導入・業務改善コンサルティング、生成AI研修・社内ルール策定支援<br>ITコンサルティング、SES事業（システム開発・運用に関するエンジニア支援、業務委託）<br>Webメディア運営<br>アプリケーションの企画・開発</td></tr>
         <tr><th>取引銀行</th><td>三井住友銀行</td></tr>
       </table>
     </div>
@@ -397,22 +398,22 @@ a { color: var(--ink); text-decoration: none; }
   <div class="section-inner">
     <div class="section-head reveal">
       <div><div class="section-label">PARTNER</div><h2 class="section-title">パートナー募集</h2></div>
-      <p class="section-lead">ITコンサルティング・エンジニア支援事業を一緒に進めていただける、フリーランスの方とパートナー企業を募集しています。</p>
+      <p class="section-lead">SES事業を共に進める、フリーランスの方とパートナー企業を募集しています。</p>
     </div>
     <div class="partner-grid">
-      <div class="partner-card dark reveal">
+      <div class="partner-card reveal">
         <div class="p-en">FOR FREELANCERS</div>
         <h3>フリーランスの方</h3>
-        <p>ご経歴とご希望に合う案件を、当社からご紹介します。登録は無料で、案件ごとに当社と業務委託契約を結んでいただく形です。</p>
+        <p>ご経歴とご希望に合う案件を、当社からご紹介します。登録は無料で、案件ごとに当社と業務委託契約を結んでいただく形です。ご登録後、面談の日程調整のご連絡をいたします。</p>
         <ul><li>PM・PMO、ITコンサルタント</li><li>生成AI・データ活用</li><li>開発・インフラエンジニア</li></ul>
-        <a class="btn btn-ink" href="https://docs.google.com/forms/d/e/1FAIpQLSeuDkoimyh33vnj-Wu8H1tKRhdWWeZJdC3xuu2e-pO87s7WUQ/viewform" target="_blank" rel="noopener">パートナー登録はこちら<span class="arw">↗</span></a>
+        <a class="btn-text" href="https://docs.google.com/forms/d/e/1FAIpQLScDkbMkK0iSpEjFekhW8v67iqTANRxDl6IXFmcuXq9tmMCrVw/viewform" target="_blank" rel="noopener">フリーランス登録フォーム<span class="arw">↗</span></a>
       </div>
       <div class="partner-card reveal">
         <div class="p-en">FOR PARTNER COMPANIES</div>
         <h3>パートナー企業の方</h3>
         <p>案件・要員の情報交換や、協業についてのご相談を歓迎しています。まずはお問い合わせフォームからお気軽にご連絡ください。</p>
         <ul><li>案件・要員情報の相互共有</li><li>プロジェクトへの共同参画</li><li>AI関連案件での協業</li></ul>
-        <a class="btn btn-ink" href="#contact" data-type="協業・パートナー企業のご相談">協業について相談する<span class="arw">→</span></a>
+        <a class="btn-text" href="#contact" data-type="協業・パートナー企業のご相談">協業について相談する<span class="arw">→</span></a>
       </div>
     </div>
   </div>
@@ -424,8 +425,8 @@ a { color: var(--ink); text-decoration: none; }
       <div><div class="section-label">NEWS</div><h2 class="section-title">お知らせ</h2></div>
       <ul class="news-list">
         <li><time datetime="2026-11">2026.11</time><span>コーポレートサイトをリニューアルしました。</span></li>
-        <li><time datetime="2026-11">2026.11</time><span>ITコンサルティング・エンジニア支援事業のパートナー募集を開始しました。</span></li>
-        <li><time datetime="2026-10">2026.10</time><span>生成AI研修と<a href="ai/">無料AI業務診断</a>の提供を開始しました。</span></li>
+        <li><time datetime="2026-11">2026.11</time><span>SES事業のパートナー募集を開始しました。</span></li>
+        <li><time datetime="2026-10">2026.10</time><span>生成AI研修とAI業務診断の提供を開始しました。</span></li>
         <li><time datetime="2026-04-01">2026.04</time><span>株式会社Ron Solutionsを設立しました。</span></li>
       </ul>
     </div>
@@ -445,7 +446,7 @@ a { color: var(--ink); text-decoration: none; }
       <select name="ご相談の種類" id="contact-type">
         <option>AI導入・業務改善のご相談</option>
         <option>生成AI研修のご相談</option>
-        <option>ITコンサル・エンジニア支援（案件・体制）のご相談</option>
+        <option>SES（案件・体制）のご相談</option>
         <option>協業・パートナー企業のご相談</option>
         <option>取材・その他</option>
       </select>
@@ -460,7 +461,7 @@ a { color: var(--ink); text-decoration: none; }
       <label>ご相談内容 <small>必須</small></label>
       <textarea name="ご相談内容" required placeholder="例：事務作業をAIで減らしたい／PMO案件の体制を相談したい／協業について話したい"></textarea>
       <input type="text" name="_honey" class="hp" tabindex="-1" autocomplete="off">
-      <label class="agree"><input type="checkbox" id="agree" required> <span><a href="privacy/" target="_blank">個人情報の取り扱い</a>に同意する</span></label>
+      <label class="agree"><input type="checkbox" id="agree" required> <span><a href="privacy/index.html" target="_blank">個人情報の取り扱い</a>に同意する</span></label>
       <button type="submit" class="btn btn-ink">送信する<span class="arw">→</span></button>
       <div class="form-status" id="form-status" role="status"></div>
     </form>
@@ -471,16 +472,15 @@ a { color: var(--ink); text-decoration: none; }
   <div class="footer-inner">
     <a href="#top" class="brand"><img src="assets/ron-logo-white.svg" alt="Ron Solutions" width="100" height="46"></a>
     <div class="footer-links">
-      <a href="#mission">ミッション</a>
+      <a href="#mission">Mission</a>
       <a href="#business">事業内容</a>
-      <a href="ai/">AIコンサルティング</a>
       <a href="#company">会社概要</a>
       <a href="#partner">パートナー募集</a>
       <a href="#contact">お問い合わせ</a>
     </div>
   </div>
   <div class="footer-bottom">
-    <a href="privacy/">個人情報の取り扱い</a>
+    <a href="privacy/index.html">個人情報の取り扱い</a>
     <div class="footer-copy en">&copy; 2026 RON SOLUTIONS, K.K.</div>
   </div>
 </footer>
